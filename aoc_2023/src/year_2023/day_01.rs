@@ -2,8 +2,6 @@ use std::str::Lines;
 
 use regex::Regex;
 
-use crate::advent::AdventOfCode;
-
 struct WordMapping {
     text: &'static str,
     value: char,
@@ -13,13 +11,6 @@ impl WordMapping {
     pub fn new(text: &'static str, value: char) -> Self {
         Self { text, value }
     }
-}
-
-pub fn register(advent: &mut AdventOfCode) {
-    let year = 2023;
-    let day = 1;
-    advent.register(year, day, 1, day_one);
-    advent.register(year, day, 2, day_one);
 }
 
 pub fn day_one(input: String) -> u32 {
